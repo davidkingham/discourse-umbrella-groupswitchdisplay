@@ -7,15 +7,15 @@ var UMBGRSW = {
 
         // parse off the optional leading "!"
         var isNegated = false;
-        if ( "!" == groupName.charAt(0) ) {
-            groupName = groupName.substring(1);
+        if ( "!" == full_member.charAt(0) ) {
+            groupName = ful_member.substring(1);
             isNegated = true;
         }
 
         // Is the current user in the specified group?
         var inGroup = false;
         if (   api.getCurrentUser() // logged in?
-            && api.getCurrentUser().groups.any(g => g.name === groupName)
+            && api.getCurrentUser().groups.any(g => g.name === full_member)
             )
         {
             inGroup = true;
